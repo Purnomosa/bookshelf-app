@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf-App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header>
+  <h1 class="text-center">📕 BOOKSHELF - APP</h1>
+</header>
+
+<div class="wrapper">
+  <div class="container bg-white shadow" id="add-book">
+    <h2 class="container-header text-center">Add Book Form</h2>
+    <form class="form" action="#" id="inputBook">
+      <div class="form-group form-title">
+        <label for="title">Book Title</label>
+        <input type="text" id="bookTitle" name="title" required >
+      </div>
+      <div class="form-group form-title">
+        <label for="autor">Book Author</label>
+        <input type="text" id="bookAuthor" name="author" required >
+      </div>
+      <div class="form-group form-title">
+        <label for="year">Year Of Book</label>
+        <input type="number" id="bookYear" name="year" required >
+      </div>
+      <div class="input_inline">
+        <label for="inputBookIsComplete">Finished reading </label>
+        <input id="inputBookIsComplete" type="checkbox" />
+     </div>
+      <input type="submit" value="Save" name="Submit" class="btn-submit">
+    </form>
+   </div>  
+
+
+  
+  <section class="container  bg-white shadow">
+  <h2 class="container-header text-center">find a book</h2>
+  <form id="searchBook" class="form-src">
+    <div class="form-group form-title">
+      <label for="text">Book Tittle</label>
+    <input id="searchBookTitle" type="src" class="by tittle" >
+    <button id="searchSubmit" type="text" class="btn-search">Search</button>
+  </div>
+  </form>
+  </section>
+
+  
+    <div class="container" id="searchResults">
+    <h2 class="container-header">Search Results</h2>
+    <p>Total : <span id="searchResultCount"></span>&nbsp;Book</p>
+    
+    <div class="list-item" id="resultBookshelf" >
+    </div>
+    </div>
+   
+
+  
+    <div class="container" id="unfnsBook" >
+      <h2 class="container-header">books unread</h2>
+      <div class="list-item" id="incompleteBookshelfList">
+    </div>
+    </div>
+  
+
+  
+    <div class="container" id="fnsBook">
+      <h2 class="container-header">finished reading</h2>
+      <div class="list-item" id="completeBookshelfList">
+      </div>
+    </div>
+
+  </div>
+
+  
+  <div id="editModal" class="modal modal-edit">
+    <div class="modal-icon"><h2> Edit Book</h2></div>
+    <form id="editBook"">
+      <input id="editBookTitle" type="text" required />
+      <input id="editBookAuthor" type="text" required />
+      <input id="editBookYear" type="number" required />
+      <button onclick="closeModalEdit()" class="editBtnCancel" type="button">Cancel</button>
+      <button id="editBookSubmit" class="editBtnSubmit" type="submit">Edit</button>
+    </form>
+  </div>
+  <div id="backdrop2" class="backdrop"></div>
+
+
+  <div id="myModal" class="modal">
+    <div class="modal-icon">Welcome</div>
+    <p id="modalContent"></p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+  <div id="backdrop" class="backdrop"></div>
+ 
+<script src="js/javascript.js" type="text/javascript"></script>
+
+</body>
+</html>
